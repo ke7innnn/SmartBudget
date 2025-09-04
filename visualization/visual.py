@@ -54,7 +54,7 @@ plt.xlabel("Predicted")
 plt.ylabel("Actual")
 plt.title("Confussion Matrix")
 plt.tight_layout()
- plt.show()
+plt.show()
 
 
 with open("scalar.pkl","wb") as f:

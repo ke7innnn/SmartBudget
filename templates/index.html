@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    @font-face {
+      font-family: "myfont";
+      src: url("{{ url_for('static', filename='fonts/myfont.ttf') }}")
+        format("truetype");
+      font-weight: normal;
+      font-style: normal;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      background: url("{{ url_for('static', filename='gif.gif') }}") no-repeat
+        center center fixed;
+      background-position: center;
+      justify-content: center;
+      align-items: center;
+      background-size: cover;
+      display: flex;
+      height: 100vh;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    .formcontainer {
+      background-color: rgba(255, 255, 255, 0.2);
+      padding: 60px;
+      margin: auto;
+      text-align: center;
+      border-radius: 30px;
+      width: 400px;
+    }
+    input,
+    button {
+      margin: 10px 0;
+      width: 90%;
+      border-radius: 5px;
+      border: 1px solid gray;
+    }
+    button {
+      background-color: orange;
+      color: white;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: darkorange;
+    }
+    h1,
+    h2 {
+      font-family: "myfont", Arial, Helvetica, sans-serif;
+      color: rgb(250, 207, 76);
+      -webkit-text-stroke: 1px black;
+    }
+
+    button:hover {
+      background-color: darkorange;
+    }
+    input,
+    button {
+      height: 45px;
+      width: 220px;
+      padding: 10px 15px;
+      font-size: 16px;
+      border-radius: 5px;
+      border: 1px solid gray;
+    }
+    input {
+      height: 30px;
+    }
+  </style>
+
+  <body>
+    <div class="formcontainer">
+      <h1>Welcome!</h1>
+      <form action="/" method="post">
+        <input type="text" name="income" placeholder="Income" /><br />
+        <input type="text" name="rent" placeholder="Rent/Housing" /><br />
+        <input type="text" name="food" placeholder="Food & Groceries" /><br />
+        <input
+          type="text"
+          name="shopping"
+          placeholder="Entertainment & Shopping"
+        /><br />
+        <input
+          type="text"
+          name="travel"
+          placeholder="Travel & Transport"
+        /><br />
+        <input
+          type="text"
+          name="savings"
+          placeholder="Savings/Investments"
+        /><br />
+        <button>Submit</button>
+        <h2>{{prediction}}</h2>
+      </form>
+    </div>
+  </body>
+</html>

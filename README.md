@@ -12,3 +12,6 @@ gunicorn==21.2.0
 pickle
 
 
+Smart Budget Analyst: A web app that uses machine learning to predict your financial health based on your income and expenses. Built with Python, Flask, and XGBoost/RndomForest.
+
+

@@ -13,8 +13,8 @@ with open("/Users/kevinpimenta/Desktop/projectml/scalar.pkl","rb") as f:
 
 label_map = {
             0: "Critical: Immediate spending review needed.",
-            2: "You're on track! Try to boost savings gradually.",
-            3: "Excellent! Consider investments for growth."
+            1: "You're on track! Try to boost savings gradually.",
+            2: "Excellent! Consider investments for growth."
         }
 
 app = Flask(__name__)
